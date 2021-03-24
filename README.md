@@ -66,3 +66,22 @@
 
 ```
 [Ссылка на решение](https://rextester.com/ALB59789)
+
+
+
+ **Задача 25**
+  ![](https://github.com/uhsd22/CLisp/blob/main/text/25.png)
+  ```
+(defun EDel (list)
+                (cond 
+                    ((null list) NIL)
+                    (t (cons (car list) (EDel (cddr list)))
+                    )
+                )
+)
+
+(print (EDel '(1 2 3 4 5 6 7 8 9 10))) ; ans : (1 3 5 7 9) 
+(print (EDel '(1 (2 3 4) 5 (6 7 8) 9 10))); ans : (1 5 9) 
+
+```
+[Ссылка на решение](https://rextester.com/YVCUDB29574)
