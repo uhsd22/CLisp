@@ -111,3 +111,11 @@
 
 ```
 [Ссылка на решение](https://rextester.com/ILP54762)
+
+
+ **Задача 45**
+  ![](https://github.com/uhsd22/CLisp/blob/main/text/45.png)
+  ```
+
+```
+[Ссылка на решение](https://rextester.com/ILP54762)
