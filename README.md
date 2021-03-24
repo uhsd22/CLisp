@@ -50,13 +50,13 @@
  **Задача 20**
   ![](https://github.com/uhsd22/CLisp/blob/main/text/20.png)
   ```
-(defun felem (lst)
+(defun felem (list)
    ((lambda (head)
          (cond ((atom head)  head)
           (t  (felem head))
          )  
     ) 
-    (car lst)
+    (car list)
    )
 
 )
@@ -65,4 +65,4 @@
 (print (felem  '() )) ; => NIL
 
 ```
-[Ссылка на решение](https://rextester.com/IXN67923)
+[Ссылка на решение](https://rextester.com/ALB59789)
