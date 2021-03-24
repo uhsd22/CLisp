@@ -4,19 +4,27 @@
   **Задача 8**
   ![](https://github.com/uhsd22/CLisp/blob/main/text/8.png)
   ```
-  (defun pos/neg (list)
+(defun a (l1 l2)
+    (cond ((null l1) l2)
+          ((null l2) l1)
+          (t (cons (car l1) (a (cdr l1) l2)))
+        )
+    )
+
+(defun pos/neg (list)
     (let ((res) (pos) (neg))
         (dolist (x list res)
             (if (>= x 0)
-            (setf pos (append pos (list x)))
-            (setf neg (append neg (list x)))))
+            (setf pos (a pos (list x)))
+            (setf neg (a neg (list x)))))
     (setf res (list pos neg))))
 
-(print (pos/neg '(-1 -2 -3 -4 -5))) ;result: (NIL (-1 -2 -3 -4 -5)) 
-(print (pos/neg '(1 2 3 4 5))) ;result: ((1 2 3 4 5) NIL)
-(print (pos/neg '(0 10 -10 15 -15))) ;result:((0 10 15) (-10 -15)) 
+(print (pos/neg '(-1 -2 -3 -4 -5)))
+(print (pos/neg '(1 2 3 4 5)))
+(print (pos/neg '(0 10 -10 15 -15)))
+
 ```
-[Ссылка на решение](https://rextester.com/YIJNAI28754)
+[Ссылка на решение](https://rextester.com/ZVJZ15639)
 
   **Задача 12**
   ![](https://github.com/uhsd22/CLisp/blob/main/text/12.png)
