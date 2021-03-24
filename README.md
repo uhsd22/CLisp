@@ -45,3 +45,24 @@
 
   **Задача 14**
   ![](https://github.com/uhsd22/CLisp/blob/main/text/14.png)
+
+
+ **Задача 20**
+  ![](https://github.com/uhsd22/CLisp/blob/main/text/20.png)
+  ```
+(defun felem (lst)
+   ((lambda (head)
+         (cond ((atom head)  head)
+          (t  (felem head))
+         )  
+    ) 
+    (car lst)
+   )
+
+)
+(print (felem  '(((a b)) (c) d))) ; => A
+(print (felem  '(123 a b 4 ))) ; => 123
+(print (felem  '() )) ; => NIL
+
+```
+[Ссылка на решение](https://rextester.com/IXN67923)
