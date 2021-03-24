@@ -19,9 +19,9 @@
             (setf neg (a neg (list x)))))
     (setf res (list pos neg))))
 
-(print (pos/neg '(-1 -2 -3 -4 -5)))
-(print (pos/neg '(1 2 3 4 5)))
-(print (pos/neg '(0 10 -10 15 -15)))
+(print (pos/neg '(-1 -2 -3 -4 -5))) ;(NIL (-1 -2 -3 -4 -5)) 
+(print (pos/neg '(1 2 3 4 5))) ;((1 2 3 4 5) NIL) 
+(print (pos/neg '(0 10 -10 15 -15)));((0 10 15) (-10 -15)) 
 
 ```
 [Ссылка на решение](https://rextester.com/ZVJZ15639)
@@ -104,10 +104,10 @@
       ))
 
 
-(print (start_func '(5 6 7 8) '(6 5 3))  )
-(print (start_func '() '()) )  
-(print (start_func '(1 2 3) '(4)) )
-(print (start_func '(13) '(6 5 3 13))  )
+(print (start_func '(5 6 7 8) '(6 5 3))  ) ; res: 5
+(print (start_func '() '()) )  ; res: NIL
+(print (start_func '(1 2 3) '(4)) ) res: NIL
+(print (start_func '(13) '(6 5 3 13))  ) res: 13
 
 ```
 [Ссылка на решение](https://rextester.com/ILP54762)
