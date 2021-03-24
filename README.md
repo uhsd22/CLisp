@@ -85,3 +85,29 @@
 
 ```
 [Ссылка на решение](https://rextester.com/YVCUDB29574)
+
+ **Задача 31**
+  ![](https://github.com/uhsd22/CLisp/blob/main/text/31.png)
+  ```
+(defun checker (at list)
+  (cond 
+      ((null list) nil)
+        ((equalp at (car list)) t)
+        ((checker at (cdr list)))
+      ))
+    
+(defun start_func (l1 l2)
+  (cond 
+      ((null l1) nil)
+        ((checker (car l1) l2) (car l1))
+        (t (start_func (cdr l1) l2))
+      ))
+
+
+(print (start_func '(5 6 7 8) '(6 5 3))  )
+(print (start_func '() '()) )  
+(print (start_func '(1 2 3) '(4)) )
+(print (start_func '(13) '(6 5 3 13))  )
+
+```
+[Ссылка на решение](https://rextester.com/ILP54762)
