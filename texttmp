@@ -1,0 +1,17 @@
+
+  (defun pair_func (list)
+ (cond 
+     ((lambda (f1 f2)
+     ((null (cdr list)) list)
+       ((eq (car list) (cadr list)) (cons (car list) (pair_func (cddr list))))
+       (t (cons (car list) (pair_func (cdr list))))
+     ))
+     (car list)
+     (cdr list)
+        )
+      )
+      
+(print (pair_func '(1 2 3 4 5))) ;result: (1 2 3 4 5) 
+(print (pair_func '(1 1 2 2 3 3 4 4)));result: (1 2 3 4)
+(print (pair_func '(1 A A 2 V V B B)));result: (1 A 2 V B)
+(print (pair_func '(A))) ;result: (A)
